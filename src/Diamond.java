@@ -1,10 +1,11 @@
-public class IsoscelesTriangle {
-    public static void isoscelesTriangle(int number) {
+public class Diamond {
+    public static void diamond(int number) {
         int horizontal = number * 2 - 1;
         int middle = horizontal / 2;
-        for (int i = 0; i < number; i++) {
+        IsoscelesTriangle.isoscelesTriangle(number);
+        for (int i = 0; i < number - 1; i++) {
             for (int j = 0; j < horizontal; j++) {
-                if ((i + j) >= middle && j <= middle + i) {
+                if (j >= middle + i - 1 && j <= middle - i + 1) {
                     System.out.print("*");
                 } else {
                     System.out.print(" ");
